@@ -9,6 +9,8 @@ def calculator(operator, param_one, param_two):
         return param_one - param_two
     elif operator == '/':
         return param_one / param_two
+    elif operator == '%':
+        return param_one % param_two
     else:
         return 'Invalid operator'
     
