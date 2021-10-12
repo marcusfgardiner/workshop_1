@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Films</title>
+    </head>
+    <body>
+        <table>
+          <thead><b>
+            <tr>
+            <th>Film</th>
+            <th>Stars</th>
+            </tr>
+            </b></thead>
+            <tbody>
+                {% for film in films %}
+                    {% if stars_filter == "" or film.stars|int == stars_filter|int %}
+                    <tr> <td> {{ film.name}} </td> <td> {{ film.stars}} </td></tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
